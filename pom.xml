@@ -13,7 +13,49 @@
         <module>log4j2-demo</module>
         <module>logback-demo</module>
         <module>test-demo</module>
+        <module>boot-log4j</module>
+        <module>boot-log4j2</module>
+        <module>boot-logback</module>
     </modules>
 
+
+
+    <!--自定义变量-->
+    <properties>
+        <springboot.version>2.3.5.RELEASE</springboot.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+
+
+    <!--依赖管理-->
+    <!--子模块继承之后，提供作用：锁定版本+子模块不用写groupId和version-->
+    <dependencyManagement>
+        <dependencies>
+
+            <!--boot项目需要的依赖，避免继承pring-boot-starter-parent-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${springboot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
 
 </project>
