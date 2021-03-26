@@ -1,0 +1,45 @@
+#.gitignore
+### project ###
+*.calss
+*.log
+*.lock
+target/
+build/
+/src/test/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+#### package files ###
+*.jar
+!**/lib/*.jar
+*.war
+*.ear
+
+### maven ###
+.mvn
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### documentation ###
+*.en.md
+*.md
+HELP.md
+
+### VS Code ###
+.vscode/
+
+### IntelliJ IDEA ###
+.idea/
+.idea
+*.iws
+*.iml
+*.ipr
+*.cmd
+mvnw
