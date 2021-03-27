@@ -10,6 +10,6 @@ public class TestLogController {
 
     public static void main(String[] args) {
 
-        logger.info("log4j2-message");
+        logger.info("boot-log4j2-message");
     }
 }

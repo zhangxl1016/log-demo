@@ -10,6 +10,6 @@ public class TestLogController {
 
     public static void main(String[] args) {
 
-        logger.info("logback-message");
+        logger.info("boot-logback-message");
     }
 }
